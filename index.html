@@ -1,349 +1,368 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Помощь дилерам</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-    --yellow:#FED42B;
-    --yellow-hover:#F7C600;
-    --bg:#F5F6F8;
-    --card:#ffffff;
-    --text:#1f2328;
-    --gray:#6b7280;
-    --border:#e8eaed;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--bg);
-    color:var(--text);
-}
-
-header{
-    background:linear-gradient(180deg,#FED42B,#FFE163);
-    padding:70px 20px;
-}
-
-.hero{
-    max-width:1180px;
-    margin:auto;
-}
-
-.hero h1{
-    font-size:48px;
-    font-weight:800;
-    margin-bottom:14px;
-}
-
-.hero p{
-    max-width:650px;
-    font-size:18px;
-    line-height:1.5;
-}
-
-.container{
-    max-width:1180px;
-    margin:auto;
-    padding:40px 20px 60px;
-}
-
-.search{
-    position:relative;
-    margin-bottom:40px;
-}
-
-.search input{
-    width:100%;
-    padding:18px 20px 18px 55px;
-    border:none;
-    border-radius:16px;
-    font-size:17px;
-    background:white;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-}
-
-.search svg{
-    position:absolute;
-    left:20px;
-    top:18px;
-    width:22px;
-    height:22px;
-    fill:#999;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:24px;
-}
-
-.card{
-    background:var(--card);
-    border-radius:20px;
-    padding:28px;
-    border:1px solid var(--border);
-    transition:.25s;
-    display:flex;
-    flex-direction:column;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(0,0,0,.10);
-}
-
-.icon{
-    width:58px;
-    height:58px;
-    border-radius:16px;
-    background:#FFF4BF;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    margin-bottom:18px;
-}
-
-.card h2{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:var(--gray);
-    line-height:1.5;
-    flex:1;
-}
-
-.btn{
-    margin-top:24px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    background:var(--yellow);
-    color:black;
-    padding:14px 18px;
-    border-radius:12px;
-    font-weight:700;
-    transition:.2s;
-}
-
-.btn:hover{
-    background:var(--yellow-hover);
-}
-
-footer{
-    text-align:center;
-    color:#777;
-    padding:30px;
-    font-size:14px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:34px;
-}
-
-.hero p{
-    font-size:16px;
-}
-
-.grid{
-    grid-template-columns:1fr;
-}
-
-}
-
-</style>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #000000; min-height: 15.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #04359d}
+    span.s1 {color: #04359d}
+    span.s2 {color: #000000}
+  </style>
 </head>
-
 <body>
-
-<header>
-
-<div class="hero">
-
-<h1>Помощь дилерам</h1>
-
-<p>
-Выберите интересующий вопрос, заполните форму и отправьте обращение.
-Мы автоматически направим его в нужную команду.
-</p>
-
-</div>
-
-</header>
-
-<div class="container">
-
-<div class="search">
-
-<svg viewBox="0 0 24 24">
-<path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8L20 22l2-2-6.5-6zM10 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
-</svg>
-
-<input
-id="search"
-type="text"
-placeholder="Поиск вопроса..."
-onkeyup="filterCards()">
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<div class="icon">📄</div>
-
-<h2>Закрывающие документы</h2>
-
-<p>
-Получение закрывающих документов по договору.
-</p>
-
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">📑</div>
-
-<h2>Акт сверки</h2>
-
-<p>
-Запросить актуальный акт сверки взаиморасчетов.
-</p>
-
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💳</div>
-
-<h2>Получить счет</h2>
-
-<p>
-Запрос счета для оплаты услуг.
-</p>
-
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🏦</div>
-
-<h2>Заморожен кабинет</h2>
-
-<p>
-Разблокировка кабинета и вопросы по задолженности.
-</p>
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🚗</div>
-
-<h2>Проблема с публикацией</h2>
-
-<p>
-Автомобиль не публикуется или возникла ошибка размещения.
-</p>
-
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">💬</div>
-
-<h2>Другой вопрос</h2>
-
-<p>
-Если нужной темы нет в списке — отправьте обращение в свободной форме.
-</p>
-
-<a class="btn"
-href="https://forms.yandex.ru/XXXXXXXX"
-target="_blank">
-Оформить запрос →
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-© 2026 Помощь дилерам
-
-</footer>
-
-<script>
-
-function filterCards(){
-
-const value=document.getElementById("search").value.toLowerCase();
-
-document.querySelectorAll(".card").forEach(card=>{
-
-card.style.display=card.innerText.toLowerCase().includes(value)
-? "flex"
-: "none";
-
-});
-
-}
-
-</script>
-
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;title&gt;Помощь дилерам&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;link rel="preconnect" href="<span class="s1">https://fonts.googleapis.com</span>"&gt;</p>
+<p class="p1">&lt;link rel="preconnect" href="<span class="s1">https://fonts.gstatic.com</span>" crossorigin&gt;</p>
+<p class="p3"><span class="s2">&lt;link href="</span>https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap<span class="s2">" rel="stylesheet"&gt;</span></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">:root{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--yellow:<span class="s1">#FED42B</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--yellow-hover:<span class="s1">#F7C600</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--bg:<span class="s1">#F5F6F8</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--card:<span class="s1">#ffffff</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--text:<span class="s1">#1f2328</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--gray:<span class="s1">#6b7280</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border:<span class="s1">#e8eaed</span>;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">*{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing:border-box;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:'Inter',sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">header{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:linear-gradient(180deg,<span class="s1">#FED42B</span>,<span class="s1">#FFE163</span>);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:70px 20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1180px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero h1{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:14px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero p{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:650px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.5;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.container{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:1180px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:40px 20px 60px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.search{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:40px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.search input{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:18px 20px 18px 55px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:17px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 8px 30px rgba(0,0,0,.08);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.search svg{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position:absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top:18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fill:#999;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.grid{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(auto-fit,minmax(320px,1fr));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap:24px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:.25s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction:column;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card:hover{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform:translateY(-6px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 18px 40px rgba(0,0,0,.10);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.icon{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:58px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height:58px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:<span class="s1">#FFF4BF</span>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card h2{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card p{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:var(--gray);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex:1;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.btn{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display:inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--yellow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:black;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:14px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transition:.2s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.btn:hover{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:var(--yellow-hover);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">footer{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#777;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:14px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="s1">@media</span>(max-width:768px){</p>
+<p class="p2"><br></p>
+<p class="p1">.hero h1{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:34px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero p{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.grid{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns:1fr;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="hero"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;Помощь дилерам&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Выберите интересующий вопрос, заполните форму и отправьте обращение.</p>
+<p class="p1">Мы автоматически направим его в нужную команду.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="search"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1">&lt;path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8L20 22l2-2-6.5-6zM10 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/&gt;</p>
+<p class="p1">&lt;/svg&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;input</p>
+<p class="p1">id="search"</p>
+<p class="p1">type="text"</p>
+<p class="p1">placeholder="Поиск вопроса..."</p>
+<p class="p1">onkeyup="filterCards()"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;📄&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Закрывающие документы&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Получение закрывающих документов по договору.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;📑&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Акт сверки&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Запросить актуальный акт сверки взаиморасчетов.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;💳&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Получить счет&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Запрос счета для оплаты услуг.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;🏦&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Заморожен кабинет&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Разблокировка кабинета и вопросы по задолженности.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;🚗&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Проблема с публикацией&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Автомобиль не публикуется или возникла ошибка размещения.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="icon"&gt;💬&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Другой вопрос&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p1">Если нужной темы нет в списке — отправьте обращение в свободной форме.</p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a class="btn"</p>
+<p class="p3"><span class="s2">href="</span>https://forms.yandex.ru/XXXXXXXX<span class="s2">"</span></p>
+<p class="p1">target="_blank"&gt;</p>
+<p class="p1">Оформить запрос →</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">© 2026 Помощь дилерам</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">function filterCards(){</p>
+<p class="p2"><br></p>
+<p class="p1">const value=document.getElementById("search").value.toLowerCase();</p>
+<p class="p2"><br></p>
+<p class="p1">document.querySelectorAll(".card").forEach(card=&gt;{</p>
+<p class="p2"><br></p>
+<p class="p1">card.style.display=card.innerText.toLowerCase().includes(value)</p>
+<p class="p1">? "flex"</p>
+<p class="p1">: "none";</p>
+<p class="p2"><br></p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
