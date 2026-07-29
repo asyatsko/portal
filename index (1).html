@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Портал менеджера</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8}
+header{background:#e53935;color:#fff;padding:24px 40px}
+.container{max-width:1100px;margin:auto;padding:30px}
+.search{background:#fff;padding:16px;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.search input{width:100%;border:none;outline:none;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:30px 0}
+.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.columns{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.block{background:#fff;padding:20px;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+@media(max-width:800px){.columns{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>🚗 Auto.ru — Портал менеджера</h1>
+<p>Инструкции, формы и процессы в одном месте</p>
+</header>
+<div class="container">
+<div class="search"><input placeholder="🔍 Найти инструкцию, форму или процесс..."></div>
+
+<h2>Популярные вопросы</h2>
+<div class="grid">
+<div class="card"><h3>📄 Документы</h3><p>Закрывающие документы, акт сверки</p></div>
+<div class="card"><h3>💳 Получить счет</h3><p>Формы и реквизиты</p></div>
+<div class="card"><h3>🚗 Объявления</h3><p>Публикация автомобиля</p></div>
+<div class="card"><h3>🔒 Кабинет</h3><p>Заморозка и разблокировка</p></div>
+<div class="card"><h3>⭐ Отзывы</h3><p>Работа с отзывами</p></div>
+<div class="card"><h3>⚙️ Другое</h3><p>Все остальные вопросы</p></div>
+</div>
+
+<div class="columns">
+<div class="block">
+<h2>Что нового</h2>
+<ul>
+<li>Добавлена форма акта сверки</li>
+<li>Обновлен процесс получения счета</li>
+<li>Обновлена инструкция по публикации</li>
+</ul>
+</div>
+<div class="block">
+<h2>Быстрые ссылки</h2>
+<ul>
+<li>CRM</li>
+<li>Админка</li>
+<li>Tracker</li>
+<li>Confluence</li>
+</ul>
+</div>
+</div>
+
+<div class="block" style="margin-top:20px;border:2px dashed #e53935;background:#fff4f4">
+<h2>🤖 AI-помощник</h2>
+<p>Здесь появится поиск по базе знаний и ответы на вопросы менеджеров.</p>
+</div>
+</div>
+</body>
+</html>
